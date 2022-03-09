@@ -1,13 +1,26 @@
 function CanDrive(hasDrivingLiscence, isTired, isSober) {
     // Write you code here
-    if (!hasDrivingLiscence) {
-        return "You cannot drive";
-    }else {
-        if (isTired || isSober) {
-            return "You shouldn't drive";
-        }
-    }
-    return "You can drive";
+   if (hasDrivingLiscence==true)
+   {
+       if (isTired==false && isSober==true)
+       {
+           return "You can drive"
+       }
+       else if (isTired==true)
+       {
+           return "You shouldn't drive"
+       } 
+       else
+       {
+        return "You shouldn't drive"
+       }
+
+   }
+   else
+   {
+       return "You cannot drive"
+       
+   }
 }
 
 module.exports = CanDrive;
